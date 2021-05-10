@@ -363,7 +363,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testGetFirstLeafKey() {
+	public void testInternalNodeGetFirstLeafKey() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.LeafNode child0 =
@@ -395,7 +395,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testMerge() {
+	public void testInternalNodeMerge() {
 		BPlusTree<Integer, String>.InternalNode node0 =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode node1 =
@@ -418,7 +418,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testSplit() {
+	public void testInternalNodeSplit() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.LeafNode child0 =
