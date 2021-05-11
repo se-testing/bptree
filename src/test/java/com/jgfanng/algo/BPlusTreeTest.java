@@ -166,7 +166,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testGetChildLeftSibling1() {
+	public void testInternalNodeGetChildLeftSibling1() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode child0 =
@@ -181,7 +181,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testGetChildLeftSibling2() {
+	public void testInternalNodeGetChildLeftSibling2() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode child0 =
@@ -196,7 +196,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testGetChildRightSibling1() {
+	public void testInternalNodeGetChildRightSibling1() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode child0 =
@@ -211,7 +211,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testGetChildRightSibling2() {
+	public void testInternalNodeGetChildRightSibling2() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode child0 =
@@ -226,7 +226,7 @@ public class BPlusTreeTest {
 	}
 
 	@Test
-	public void testIsOverflow() {
+	public void testInternalNodeIsOverflow() {
 		BPlusTree<Integer, String>.InternalNode node =
 				new BPlusTree<Integer, String>(4).new InternalNode();
 		BPlusTree<Integer, String>.InternalNode child0 =
