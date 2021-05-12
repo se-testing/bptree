@@ -10,7 +10,7 @@ public class SearchTests {
 
     @BeforeEach
     private void initTree() {
-        bptree = new BPlusTree<Integer, Integer>();
+        bptree = new BPlusTree<>();
         bptree.insert(1, 10);
         bptree.insert(2, 20);
         bptree.insert(3, 30);
