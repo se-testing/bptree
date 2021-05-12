@@ -42,19 +42,27 @@ public class BPlusTreeDataFlowTest {
         instance.insert(1, "_1");
         instance.insert(2, "_2");
         instance.insert(3, "_3");
+
+        final String expect0 = "_1";
+        final String result0 = instance.search(1);
+        Assertions.assertEquals(expect0, result0);
+
         instance.insert(4, "_4");
+
+        final String expect1 = "_4";
+        final String result1 = instance.search(4);
+        Assertions.assertEquals(expect1, result1);
+
         instance.insert(5, "_5");
         instance.insert(6, "_6");
         instance.insert(7, "_7");
         instance.insert(8, "_8");
         instance.insert(9, "_9");
-        instance.insert(1, "__1");
         instance.insert(100, "special");
 
-        final Integer expect = 10;
-        final Integer result = instance.searchRange(1, BPlusTree.RangePolicy.INCLUSIVE,
-                100, BPlusTree.RangePolicy.INCLUSIVE).size();
-        Assertions.assertEquals(expect, result);
+        final String expect2 = "special";
+        final String result2 = instance.search(100);
+        Assertions.assertEquals(expect2, result2);
     }
 
     @Test
