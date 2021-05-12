@@ -1,13 +1,12 @@
-package com.jgfanng.algo.path.bplustree;
+package com.jgfanng.algo;
 
-import com.jgfanng.algo.BPlusTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class SearchRangeTests {
+public class BPlusTreeSearchRangeTests {
     private BPlusTree<Integer, Integer> bptree = null;
 
     @BeforeEach

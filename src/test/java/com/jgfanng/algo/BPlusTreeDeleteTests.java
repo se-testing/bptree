@@ -1,10 +1,9 @@
-package com.jgfanng.algo.path.bplustree;
+package com.jgfanng.algo;
 
-import com.jgfanng.algo.BPlusTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class DeleteTests {
+public class BPlusTreeDeleteTests {
     @Test
     public void testDelete() {
         var bptree = new BPlusTree<Integer, Integer>();

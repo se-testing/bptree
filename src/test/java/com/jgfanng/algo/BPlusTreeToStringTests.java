@@ -1,11 +1,10 @@
-package com.jgfanng.algo.path.bplustree;
+package com.jgfanng.algo;
 
-import com.jgfanng.algo.BPlusTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ToStringTests {
+public class BPlusTreeToStringTests {
     private BPlusTree<Integer, Integer> bptree = null;
 
     @BeforeEach

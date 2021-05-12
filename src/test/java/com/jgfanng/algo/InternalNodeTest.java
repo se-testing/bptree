@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BPlusTreeTest {
+public class InternalNodeTest {
 	@Test
 	public void test() {
 		BPlusTree<Integer, String> bpt = new BPlusTree<Integer, String>(4);
