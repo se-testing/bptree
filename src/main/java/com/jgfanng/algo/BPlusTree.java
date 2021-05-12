@@ -122,7 +122,7 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
         return sb.toString();
     }
 
-    private abstract class Node {
+    protected abstract class Node {
         List<K> keys;
 
         int keyNumber() {
@@ -153,7 +153,7 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
         }
     }
 
-    private class InternalNode extends Node {
+    protected class InternalNode extends Node {
         List<Node> children;
 
         InternalNode() {
@@ -293,7 +293,7 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
         }
     }
 
-    private class LeafNode extends Node {
+    protected class LeafNode extends Node {
         List<V> values;
         LeafNode next;
 
