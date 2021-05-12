@@ -293,7 +293,7 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
         }
     }
 
-    protected class LeafNode extends Node {
+    class LeafNode extends Node {
         List<V> values;
         LeafNode next;
 
@@ -343,8 +343,7 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
         }
 
         @Override
-        List<V> getRange(K key1, RangePolicy policy1, K key2,
-                         RangePolicy policy2) {
+        List<V> getRange(K key1, RangePolicy policy1, K key2, RangePolicy policy2) {
             List<V> result = new LinkedList<V>();
             LeafNode node = this;
             while (node != null) {
@@ -355,11 +354,9 @@ public class BPlusTree<K extends Comparable<? super K>, V> {
                     V value = vIt.next();
                     int cmp1 = key.compareTo(key1);
                     int cmp2 = key.compareTo(key2);
-                    if (((policy1 == RangePolicy.EXCLUSIVE && cmp1 > 0) || (policy1 == RangePolicy.INCLUSIVE && cmp1 >= 0))
-                            && ((policy2 == RangePolicy.EXCLUSIVE && cmp2 < 0) || (policy2 == RangePolicy.INCLUSIVE && cmp2 <= 0)))
+                    if (((policy1 == RangePolicy.EXCLUSIVE && cmp1 > 0) || (policy1 == RangePolicy.INCLUSIVE && cmp1 >= 0)) && ((policy2 == RangePolicy.EXCLUSIVE && cmp2 < 0) || (policy2 == RangePolicy.INCLUSIVE && cmp2 <= 0)))
                         result.add(value);
-                    else if ((policy2 == RangePolicy.EXCLUSIVE && cmp2 >= 0)
-                            || (policy2 == RangePolicy.INCLUSIVE && cmp2 > 0))
+                    else if ((policy2 == RangePolicy.EXCLUSIVE && cmp2 >= 0)  || (policy2 == RangePolicy.INCLUSIVE && cmp2 > 0))
                         return result;
                 }
                 node = node.next;
